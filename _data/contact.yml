@@ -8,7 +8,7 @@
 
 - type: linkedin
   icon: 'fab fa-linkedin'
-  link: 'https://www.linkedin.com/in/yeremy-alvarado-gamboa-5b28a8284/'
+  url: 'https://www.linkedin.com/in/yeremy-alvarado-gamboa-5b28a8284/'
 
 # - type: email
 #   icon: "fas fa-envelope"
