@@ -1,4 +1,3 @@
-
 ---
 title: Kio Writeup - Pentester Mentor Junior (PMJ)
 date: 2026-06-19
@@ -6,6 +5,8 @@ categories: [Writeup, PMJ]
 tags: [Writeup, Linux, PMJ]
 image: /assets/img/commons/KioWriteup/kio_banner.png
 ---
+
+# Introducción
 
 En esta ocasión estaré resolviendo la máquina **Kio**, una máquina Linux de dificultad fácil perteneciente a la certificación **Pentester Mentor Junior (PMJ)** de la academia **Hacker Mentor**.
 
