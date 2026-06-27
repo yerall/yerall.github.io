@@ -16,14 +16,14 @@ El objetivo de este laboratorio es identificar una vulnerabilidad crítica en SM
 
 
 ```
-![login_principal](/assets/img/commons/KioWriteup/login_principal.jpeg)
+![login_principal](/assets/img/commons/EternalWriteup/login_principal.jpeg)
 ```
 
 # Reconocimiento
 
 Una vista del login de la maquina
 
-![login_principal](/assets/img/commons/KioWriteup/login_principal.jpeg)
+![login_principal](/assets/img/commons/EternalWriteup/login_principal.jpeg)
 
 El primer paso fue verificar que la máquina objetivo estuviera activa dentro de la red.
 
@@ -33,7 +33,7 @@ ping 192.168.100.81
 
 La respuesta confirmó que la máquina se encontraba disponible para continuar con las siguientes fases.
 
-![ping_maquina](/assets/img/commons/KioWriteup/ping_maquina.png)
+![ping_maquina](/assets/img/commons/EternalWriteup/ping_maquina.png)
 
 # Escaneo
 
@@ -55,7 +55,7 @@ Durante el escaneo se detectó que el puerto **445/TCP** estaba abierto, corresp
 
 Además, el script **vuln** indicó que el sistema era vulnerable a **MS17-010 (EternalBlue)**, convirtiéndose en el principal vector de ataque para las siguientes fases.
 
-![escaneo_nmap](/assets/img/commons/KioWriteup/escaneo_nmap.png)
+![escaneo_nmap](/assets/img/commons/EternalWriteup/escaneo_nmap.png)
 
 # Enumeración
 
@@ -81,7 +81,7 @@ run
 
 **La enumeración confirmó información relevante sobre el servicio SMB.**
 
-![escaner_version](/assets/img/commons/KioWriteup/escaner_version.png)
+![escaner_version](/assets/img/commons/EternalWriteup/escaner_version.png)
 
 Posteriormente busqué información adicional sobre la vulnerabilidad.
 
@@ -91,7 +91,7 @@ searchsploit ms17-010
 
 Los resultados mostraron distintos exploits públicos relacionados con EternalBlue.
 
-![busqueda_exploit](/assets/img/commons/KioWriteup/busqueda_exploit.png)
+![busqueda_exploit](/assets/img/commons/EternalWriteup/busqueda_exploit.png)
 
 ---
 
@@ -121,7 +121,7 @@ Una vez configurado el exploit, ejecuté la explotación.
 run
 ```
 
-![run_exploit](/assets/img/commons/KioWriteup/run_exploit.png)
+![run_exploit](/assets/img/commons/EternalWriteup/run_exploit.png)
 
 Tras unos segundos se obtuvo una sesión Meterpreter sobre la máquina objetivo. Mostramos el usuario con el que se ejecuta la sesión Meterpreter.
 
@@ -137,7 +137,7 @@ sysinfo
 
 La salida confirmó que el sistema había sido comprometido exitosamente.
 
-![comandos_dentro](/assets/img/commons/KioWriteup/comandos_dentro.png)
+![comandos_dentro](/assets/img/commons/EternalWriteup/comandos_dentro.png)
 
 Incluso podemos ver con el comando `help` la lista de comandos que tenemos disponibles para ejecutar dentro de la pagina, entre los que se destacan comandos de tipo:
 
