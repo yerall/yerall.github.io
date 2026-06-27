@@ -14,11 +14,6 @@ El objetivo de este laboratorio es identificar una vulnerabilidad crítica en SM
   
 ---
 
-
-```
-![login_principal](/assets/img/commons/EternalWriteup/login_principal.jpeg)
-```
-
 # Reconocimiento
 
 Una vista del login de la maquina
